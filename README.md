@@ -1,6 +1,6 @@
 # Video Streaming Backend
 
-This project is an ASP.NET Core-based video streaming backend that has evolved into a full MVC application. It is designed for local development and containerized deployment using Docker. The application dynamically lists any MP4 video file placed in the `videos` folder, streams video files using HTTP range requests (allowing features like seeking), and provides a user-friendly web interface.
+This project is an ASP.NET Core-based video streaming backend. It is designed for local development and containerized deployment using Docker. The application dynamically lists any MP4 video file placed in the `videos` folder, streams video files using HTTP range requests (allowing features like seeking), and provides a user-friendly web interface.
 
 ## Features
 
