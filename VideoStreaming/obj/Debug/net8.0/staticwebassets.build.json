@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "wSvKivmHYsrzD0VUYeurJ+SWIR8Mjw+CmvkajSyjRbw=",
+  "Source": "VideoStreaming",
+  "BasePath": "_content/VideoStreaming",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
