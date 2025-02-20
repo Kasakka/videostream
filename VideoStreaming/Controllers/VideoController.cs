@@ -8,22 +8,39 @@ namespace VideoStreaming.Controllers
 {
     public class VideoController : Controller
     {
-        // TODO: Get videos from a database?
-        private static readonly List<Video> Videos = new List<Video>
+        private List<Video> GetVideos()
         {
-            new Video { Id = 1, Title = "Sample Video", FilePath = "videos/unreal.mp4" }
-        };
+            string videoFolder = Path.Combine(Directory.GetCurrentDirectory(), "videos");
+
+            if (!Directory.Exists(videoFolder))
+            {
+                Directory.CreateDirectory(videoFolder);
+            }
+
+            var videoFiles = Directory.GetFiles(videoFolder, "*.mp4");
+
+            var videos = videoFiles.Select((file, index) => new Video
+            {
+                Id = index + 1,
+                Title = Path.GetFileNameWithoutExtension(file),
+                FilePath = file
+            }).ToList();
+
+            return videos;
+        }
 
         // GET: /Video/Index
         public IActionResult Index()
         {
-            return View(Videos);
+            var videos = GetVideos();
+            return View(videos);
         }
 
         // GET: /Video/Details/1
         public IActionResult Details(int id)
         {
-            var video = Videos.FirstOrDefault(v => v.Id == id);
+            var videos = GetVideos();
+            var video = videos.FirstOrDefault(v => v.Id == id);
             if (video == null)
             {
                 return NotFound();
@@ -35,7 +52,8 @@ namespace VideoStreaming.Controllers
         [HttpGet]
         public IActionResult Stream(int id)
         {
-            var video = Videos.FirstOrDefault(v => v.Id == id);
+            var videos = GetVideos();
+            var video = videos.FirstOrDefault(v => v.Id == id);
             if (video == null)
             {
                 return NotFound();
