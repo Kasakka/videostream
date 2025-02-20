@@ -1,20 +1,20 @@
 # Video Streaming Backend
 
-This project is an ASP.NET Core-based video streaming backend. It is designed for local development and containerized deployment using Docker. The project demonstrates how to serve video files with HTTP range requests (supporting features like seeking) while also providing a user-friendly web interface using the Model-View-Controller (MVC) pattern.
+This project is an ASP.NET Core-based video streaming backend that has evolved into a full MVC application. It is designed for local development and containerized deployment using Docker. The application dynamically lists any MP4 video file placed in the `videos` folder, streams video files using HTTP range requests (allowing features like seeking), and provides a user-friendly web interface.
 
 ## Features
 
+- **Dynamic Video Listing:**  
+  Automatically lists any MP4 files added to the `videos` folder at the project root.
+  
 - **Video Streaming:**  
-  Stream video files using HTTP range requests. This allows users to seek to different parts of the video.
+  Streams video files using HTTP range requests, enabling users to seek within videos.
   
 - **MVC Web UI:**  
-  Provides a full web interface with views and controllers. Users can browse available videos, view details, and stream content directly from the browser.
+  Provides a full web interface with controllers, views, and a shared layout (styled with Material Design using Materialize CSS). Users can browse available videos, view video details, and stream content directly from the browser.
   
 - **Container Support:**  
   Dockerized application for easy deployment and consistent environments.
   
 - **Local Development:**  
-  Simple configuration to run locally, with an in-memory list of videos that can later be extended to use a database.
-  
-- **REST API Endpoint:**  
-  Although the project now uses MVC, it retains the capability to stream video through a dedicated endpoint (e.g., `/Video/Stream/{id}`).
+  Simple configuration to run locally—just add your MP4 video files to the `videos` folder and the app will list them.
