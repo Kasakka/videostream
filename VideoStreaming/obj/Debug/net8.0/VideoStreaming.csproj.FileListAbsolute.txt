@@ -27,3 +27,6 @@ E:\Koodi\C#\videostream\VideoStreaming\VideoStreaming\obj\Debug\net8.0\refint\Vi
 E:\Koodi\C#\videostream\VideoStreaming\VideoStreaming\obj\Debug\net8.0\VideoStreaming.pdb
 E:\Koodi\C#\videostream\VideoStreaming\VideoStreaming\obj\Debug\net8.0\VideoStreaming.genruntimeconfig.cache
 E:\Koodi\C#\videostream\VideoStreaming\VideoStreaming\obj\Debug\net8.0\ref\VideoStreaming.dll
+E:\Koodi\C#\videostream\VideoStreaming\VideoStreaming\obj\Debug\net8.0\VideoStreaming.RazorAssemblyInfo.cache
+E:\Koodi\C#\videostream\VideoStreaming\VideoStreaming\obj\Debug\net8.0\VideoStreaming.RazorAssemblyInfo.cs
+E:\Koodi\C#\videostream\VideoStreaming\VideoStreaming\obj\Debug\net8.0\VideoStreaming.sourcelink.json

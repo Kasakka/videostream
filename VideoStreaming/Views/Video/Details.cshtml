@@ -1,0 +1,17 @@
+﻿@model VideoStreaming.Models.Video
+@{
+    ViewBag.Title = "Video Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col s12">
+        <h4>@Model.Title</h4>
+        <div class="video-container">
+            <video class="responsive-video" controls>
+                <source src="@Url.Action("Stream", "Video", new { id = Model.Id })" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>

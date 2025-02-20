@@ -1,0 +1,23 @@
+﻿@model IEnumerable<VideoStreaming.Models.Video>
+@{
+    ViewBag.Title = "Available Videos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4 class="header">Available Videos</h4>
+<div class="row">
+    @foreach (var video in Model)
+    {
+        <div class="col s12 m6">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">@video.Title</span>
+                    <p>Click below to play.</p>
+                </div>
+                <div class="card-action">
+                    <a href="@Url.Action("Details", "Video", new { id = video.Id })">Play video!</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
