@@ -1,6 +1,6 @@
 # Video Streaming Backend
 
-This project is an ASP.NET Core-based video streaming backend that has evolved into a full MVC application. It is designed for local development and containerized deployment using Docker. The project demonstrates how to serve video files with HTTP range requests (supporting features like seeking) while also providing a user-friendly web interface using the Model-View-Controller (MVC) pattern.
+This project is an ASP.NET Core-based video streaming backend. It is designed for local development and containerized deployment using Docker. The project demonstrates how to serve video files with HTTP range requests (supporting features like seeking) while also providing a user-friendly web interface using the Model-View-Controller (MVC) pattern.
 
 ## Features
 
